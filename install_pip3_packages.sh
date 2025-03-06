@@ -188,6 +188,8 @@ if [ "$CUDA_VERSION" != "0" ]; then
     pip3 install ./thirdparty/monogs/submodules/diff-gaussian-rasterization    # to clean: $ rm -rf thirdparty/monogs/submodules/diff-gaussian-rasterization/build thirdparty/monogs/submodules/diff-gaussian-rasterization/*.egg-info
 else
     print_yellow "Skipping MonoGS since CUDA_VERSION is 0"
+
+    pip3 install trimesh
 fi
 
 
