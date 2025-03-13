@@ -60,10 +60,10 @@ DATASET:
   #type: KITTI_DATASET
   #type: TUM_DATASET
   #type: REPLICA_DATASET
-  type: VIDEO_DATASET
+  # type: VIDEO_DATASET # default video dataset
   #type: FOLDER_DATASET
   #type: LIVE_DATASET  # Not recommended for current development stage
-
+  type: STOMACH_DATASET
 
 KITTI_DATASET:
   type: kitti
@@ -199,3 +199,22 @@ GLOBAL_PARAMETERS:
   #kUseVolumetricIntegration: True
   #kVolumetricIntegrationUseDepthEstimator: True
   
+STOMACH_DATASET:
+  type: video
+  sensor_type: mono   # Here, 'sensor_type' can be only 'mono' 
+  #
+  # base_path: ./data/videos/kitti00
+  # settings: settings/KITTI00-02.yaml
+  # name: video.mp4
+  #
+  base_path: ../../data
+  settings: ../../data/pyslam_settings.yaml
+  name: stomach_tester.mp4
+  #
+  #base_path: ./data/videos/webcam
+  #settings: settings/WEBCAM.yaml 
+  #name: video.mp4
+  #
+  groundtruth_file: auto
+  is_color: True
+  # timestamps: times.txt # to be intended as the frame timestamps
